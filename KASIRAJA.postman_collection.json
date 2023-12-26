@@ -1,0 +1,3440 @@
+{
+	"info": {
+		"_postman_id": "2ee61c45-b786-422b-a0dc-84b164d0689e",
+		"name": "KASIRAJA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31957944"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Toko kedua\",\r\n   \"email\": \"dzikril.com\",\r\n   \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/registration",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Toko Dzikril\",\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/registration",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"registration"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "117"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 03:59:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Toko berhasil didaftarkan\",\n    \"data\": {\n        \"name\": \"Toko Dzikril\",\n        \"email\": \"dzikril@gmail.com\"\n    }\n}"
+						},
+						{
+							"name": "eror registration with blank name",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/registration",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"registration"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:01:39 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Eror registration with invalid email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Toko kedua\",\r\n   \"email\": \"dzikril@com\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/registration",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"registration"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "61"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:03:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"email\\\" must be a valid email\"\n}"
+						},
+						{
+							"name": "Eror registration with blank password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Toko kedua\",\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/registration",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"registration"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "69"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:05:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"password\\\" is not allowed to be empty\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODZkNzZkLTllZWYtNDU1OC05M\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/authentications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authentications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authentications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authentications"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,Accept-Encoding,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "497"
+								},
+								{
+									"key": "content-encoding",
+									"value": "br"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:08:53 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Authentication berhasil ditambahkan\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.ctnAjzyQR_ayA68Sh1smHPtZL6yjG7oxPCuc8FEe82w\",\n        \"user\": {\n            \"id\": \"4d56935a-e7e1-4ac7-ba6e-1d165e7ef913\",\n            \"name\": \"Toko Dzikril\",\n            \"role\": \"admin\",\n            \"email\": \"dzikril@gmail.com\",\n            \"officeId\": \"6a11dd40-3241-4954-9f52-397bed0bbdc2\",\n            \"companyId\": \"73538f32-122c-401a-98e7-6b2b67d6e0eb\",\n            \"company_name\": \"Toko Dzikril\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Failed Login With wrong email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\": \"dzikril99@gmail.com\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authentications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authentications"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "64"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:09:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"Kredensial yang Anda berikan salah\"\n}"
+						},
+						{
+							"name": "Failed login with wrong password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"122345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authentications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authentications"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "64"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:10:32 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"Kredensial yang Anda berikan salah\"\n}"
+						},
+						{
+							"name": "Failed login with blank email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\": \"\",\r\n   \"password\": \"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authentications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authentications"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "66"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:11:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"email\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Failed login with blank password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\": \"dzikril@gmail.com\",\r\n   \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authentications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authentications"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "69"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:11:51 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"password\\\" is not allowed to be empty\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Add categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"roti 123\",\r\n   \"description\": \"nikmat dan lezat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success add categories",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"roti keju\",\r\n   \"description\": \"nikmat\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "142"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:32:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Category berhasil ditambahkan\",\n    \"data\": {\n        \"categoryId\": \"46c2bb84-9d00-4565-be3b-48451dc51c81\",\n        \"name\": \"roti keju\"\n    }\n}"
+						},
+						{
+							"name": "failed add categories with blank name",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"description\": \"nikmat\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:41:21 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Success add categories with blank description",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"roti coklat\",\r\n   \"description\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "144"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:41:57 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Category berhasil ditambahkan\",\n    \"data\": {\n        \"categoryId\": \"70fc5540-3400-4a77-b5ca-4fdfb9d5629f\",\n        \"name\": \"roti coklat\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "View Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/46c2bb84-9d00-4565-b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"46c2bb84-9d00-4565-b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success View Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "content-length",
+									"value": "84"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:50:13 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"category\": {\n            \"name\": \"roti keju\",\n            \"description\": \"nikmat\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Failed View Categories with invalid id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-b",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-b"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "44"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:51:09 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"id tidak valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Categories",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"\",\r\n   \"description\": \"\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"46c2bb84-9d00-4565-be3b-48451dc51c81"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Categories",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"roti coklat\",\r\n   \"description\": \"coklat manis\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "50"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:55:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"roti coklat\"\n    }\n}"
+						},
+						{
+							"name": "Failed Update Categories with blank name",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"description\": \"coklat manis\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:56:05 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Success Update Categories with blank descriptions",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"roti abon\",\r\n   \"description\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "48"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:56:56 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"roti abon\"\n    }\n}"
+						},
+						{
+							"name": "Failed Update Categories with blank name and descriptions",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"description\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 04:57:46 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Categories",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"46c2bb84-9d00-4565-be3b-48451dc51c81"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success delete categories",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categories/46c2bb84-9d00-4565-be3b-48451dc51c81",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categories",
+										"46c2bb84-9d00-4565-be3b-48451dc51c81"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:01:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Add Customers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"wahyu\",\r\n   \"phone\": \"0823127337\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Customers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Dzikril\",\r\n   \"phone\": \"081234567890\",\r\n   \"address\": \"Tegal\",\r\n   \"description\": \"nyenyenye\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "140"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:04:54 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer berhasil ditambahkan\",\n    \"data\": {\n        \"customerId\": \"b07b2759-d644-4b77-b80e-f8c772b2b7f0\",\n        \"name\": \"Dzikril\"\n    }\n}"
+						},
+						{
+							"name": "Failed Add Customers with blank name",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"phone\": \"081234567890\",\r\n   \"address\": \"Tegal\",\r\n   \"description\": \"nyenyenye\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:05:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Success Add Customers with blank phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Adhyt\",\r\n   \"phone\": \"\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"nyenyenye\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "138"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:06:02 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer berhasil ditambahkan\",\n    \"data\": {\n        \"customerId\": \"914cc251-b061-4eee-a94e-ea0d8ce021f1\",\n        \"name\": \"Adhyt\"\n    }\n}"
+						},
+						{
+							"name": "Success Add Customers with blank adress",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Putri Arumsari\",\r\n   \"phone\": \"0823127337\",\r\n   \"address\": \"\",\r\n   \"description\": \"nyenyenye\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "147"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:07:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer berhasil ditambahkan\",\n    \"data\": {\n        \"customerId\": \"7aa22ccd-3f1f-4928-a0a1-523a8a1e1f5d\",\n        \"name\": \"Putri Arumsari\"\n    }\n}"
+						},
+						{
+							"name": "Success Add Customers with blank descriptions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"wahyu\",\r\n   \"phone\": \"0823127337\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "138"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:08:34 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer berhasil ditambahkan\",\n    \"data\": {\n        \"customerId\": \"7a9d6469-1299-4a9b-a81f-3944be7c89f3\",\n        \"name\": \"wahyu\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "View Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/customers?q=Adhyt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "q",
+									"value": "Adhyt"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success view customer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customers?page=1&q=wahyu",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "q",
+											"value": "wahyu"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "content-length",
+									"value": "187"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:14:28 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"customers\": [\n            {\n                \"id\": \"7a9d6469-1299-4a9b-a81f-3944be7c89f3\",\n                \"name\": \"wahyu\",\n                \"phone\": \"0823127337\",\n                \"description\": \"\"\n            }\n        ],\n        \"meta\": {\n            \"totalPages\": 1,\n            \"total\": 1,\n            \"page\": \"1\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Success view all customers list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customers?page=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										},
+										{
+											"key": "q",
+											"value": "adhyt",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,Accept-Encoding,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "content-length",
+									"value": "327"
+								},
+								{
+									"key": "content-encoding",
+									"value": "br"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:15:42 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"customers\": [\n            {\n                \"id\": \"7a9d6469-1299-4a9b-a81f-3944be7c89f3\",\n                \"name\": \"wahyu\",\n                \"phone\": \"0823127337\",\n                \"description\": \"\"\n            },\n            {\n                \"id\": \"7aa22ccd-3f1f-4928-a0a1-523a8a1e1f5d\",\n                \"name\": \"Putri Arumsari\",\n                \"phone\": \"0823127337\",\n                \"description\": \"nyenyenye\"\n            },\n            {\n                \"id\": \"914cc251-b061-4eee-a94e-ea0d8ce021f1\",\n                \"name\": \"Adhyt\",\n                \"phone\": \"\",\n                \"description\": \"nyenyenye\"\n            },\n            {\n                \"id\": \"b07b2759-d644-4b77-b80e-f8c772b2b7f0\",\n                \"name\": \"Dzikril\",\n                \"phone\": \"081234567890\",\n                \"description\": \"nyenyenye\"\n            },\n            {\n                \"id\": \"c2e5ce35-83a7-4f51-937c-c4c48a22f66d\",\n                \"name\": \"Pelanggan Umum\",\n                \"phone\": \"\",\n                \"description\": \"-\"\n            }\n        ],\n        \"meta\": {\n            \"totalPages\": 1,\n            \"total\": 5,\n            \"page\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "Success View Customers with filter customers name parameter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customers?q=Adhyt",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "q",
+											"value": "Adhyt"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "content-length",
+									"value": "184"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:17:21 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"customers\": [\n            {\n                \"id\": \"914cc251-b061-4eee-a94e-ea0d8ce021f1\",\n                \"name\": \"Adhyt\",\n                \"phone\": \"\",\n                \"description\": \"nyenyenye\"\n            }\n        ],\n        \"meta\": {\n            \"totalPages\": 1,\n            \"total\": 1,\n            \"page\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customers",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Adhytia\",\r\n   \"phone\": \"082314942986\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Customers",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Adhytia Putri\",\r\n   \"phone\": \"08987654321\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "52"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:21:08 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Adhytia Putri\"\n    }\n}"
+						},
+						{
+							"name": "Failed update customers with blank name",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"\",\r\n   \"phone\": \"08987654321\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "65"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:21:42 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"\\\"name\\\" is not allowed to be empty\"\n}"
+						},
+						{
+							"name": "Success update customers with blank phone",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Adhytia\",\r\n   \"phone\": \"\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:22:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Adhytia\"\n    }\n}"
+						},
+						{
+							"name": "Success Update Customers with blank adress",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Adhytia\",\r\n   \"phone\": \"082314942986\",\r\n   \"address\": \"\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:23:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Adhytia\"\n    }\n}"
+						},
+						{
+							"name": "Success update customers with blank descriptions",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"Adhytia\",\r\n   \"phone\": \"082314942986\",\r\n   \"address\": \"Palembang\",\r\n   \"description\": \"\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:23:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Adhytia\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete Customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRkNTY5MzVhLWU3ZTEtNGFjNy1iYTZlLTFkMTY1ZTdlZjkxMyIsImNvbXBhbnlJZCI6IjczNTM4ZjMyLTEyMmMtNDAxYS05OGU3LTZiMmI2N2Q2ZTBlYiIsImlhdCI6MTcwMzM5MDkzM30.rH5XnBQA4W_HOjqumkjSykftF8SKsfW_IknXgqMj_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customers/b07b2759-d644-4b77-b80e-f8c772b2b7f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customers",
+										"b07b2759-d644-4b77-b80e-f8c772b2b7f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,User-Agent"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "content-length",
+									"value": "121"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 24 Dec 2023 05:25:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "LiteSpeed"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Niagahoster"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000, h3-Q050=\":443\"; ma=2592000, h3-Q046=\":443\"; ma=2592000, h3-Q043=\":443\"; ma=2592000, quic=\":443\"; ma=2592000; v=\"43,46\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"customer\": {\n            \"name\": \"Adhytia\",\n            \"phone\": \"082314942986\",\n            \"address\": \"Palembang\",\n            \"description\": \"\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
